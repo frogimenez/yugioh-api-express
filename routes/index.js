@@ -12,12 +12,11 @@ const removeExtensionFile = (fileName) => {
 fs.readdirSync(PATH_ROUTES).filter((file) =>{
     const name = removeExtensionFile(file);
     if(name !== 'index'){
+
         router.use(`/${name}`,require(`./${file}`))//TODO http://localhost:3001/api/tracks etc..
+
     }
 });
-
-
-
 
 
 
