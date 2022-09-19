@@ -1,8 +1,8 @@
 const models = {
-    usersModels: require('./nosql/users'),
-    tracksModels: require('./nosql/tracks'),
-    cardsModels: require('./nosql/cards'),
-    decksModels: require('./nosql/decks'),
+    usersModel: require('./nosql/users'),
+    tracksModel: require('./nosql/tracks'),
+    cardsModel: require('./nosql/cards'),
+    decksModel: require('./nosql/decks'),
 
 
 }

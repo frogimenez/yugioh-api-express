@@ -1,7 +1,5 @@
 const mongoose = require("mongoose");
-const mongoosePaginate = require("mongoose-paginate-v2");
-const mongoosePaginateAggregate = require("mongoose-aggregate-paginate-v2");
-const mongoseDelete = require("mongoose-delete");
+
 
 const TracksScheme = new mongoose.Schema(
   {
@@ -48,7 +46,7 @@ const TracksScheme = new mongoose.Schema(
     timestamps: true,
   }
 );
-TracksScheme.plugin(mongoosePaginate);
-TracksScheme.plugin(mongoosePaginateAggregate);
-TracksScheme.plugin(mongoseDelete, { overrideMethods: true, deletedAt: true });
+// TracksScheme.plugin(mongoosePaginate);
+// TracksScheme.plugin(mongoosePaginateAggregate);
+// TracksScheme.plugin(mongoseDelete, { overrideMethods: true, deletedAt: true });
 module.exports = mongoose.model("tracks", TracksScheme);

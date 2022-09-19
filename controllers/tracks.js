@@ -1,4 +1,4 @@
-
+const {tracksModel} = require('../models')
 
 
 
@@ -8,8 +8,9 @@
  * @param {*} res 
  */
 
-const getItems = (req,res) => {
-    const data = ['Hola mundo']
+const getItems = async (req,res) => {
+    const data =  await tracksModel.find({});
+
     
     res.send({data})
 };
@@ -30,7 +31,13 @@ const getItem = (req,res) => {
  * @param {*} req 
  * @param {*} res  
  */
-const createItem = (req,res) => {};
+const createItem = async (req,res) => {
+    const {body} = req;
+    console.log(body);
+
+    
+    res.send({algo:1})
+};
 
 /**
  *Eliminar un registro
